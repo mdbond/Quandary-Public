@@ -2,20 +2,25 @@
 SOURCES = $(wildcard */*.java)
 CLASSES = $(SOURCES:.java=.class) parser/Lexer.class parser/sym.class parser/Parser.class
 
-default: parser/Lexer.java parser/Parser.java $(CLASSES)
+default: classes submission
 
-parser/Lexer.java: parser/Scanner.jflex
+classes:
 	cd parser && $(JFLEX_DIR)/bin/jflex --nobak Scanner.jflex
-
-parser/Parser.java: parser/Parser.cup
 	cd parser && java -jar $(CUP_DIR)/java-cup-11b.jar -interface -parser Parser Parser.cup
+	javac -cp $(CUP_DIR)/java-cup-11b.jar:. */*.java
 
-%.class: %.java
-	javac -cp $(CUP_DIR)/java-cup-11b.jar:. $<
+submission:
+	rm -f myproject.tgz
+	tar czf myproject.tgz quandary Makefile */*.java parser/Scanner.jflex parser/Parser.cup
 
 clean:
 	rm -f */*.class parser/Lexer.java parser/sym.java parser/Parser.java
 
-submission: clean
-	rm -f myproject.tgz
-	tar czf myproject.tgz *
+#parser/Lexer.java: parser/Scanner.jflex
+#	cd parser && $(JFLEX_DIR)/bin/jflex --nobak Scanner.jflex
+
+#parser/Parser.java: parser/Parser.cup
+#	cd parser && java -jar $(CUP_DIR)/java-cup-11b.jar -interface -parser Parser Parser.cup
+
+#%.class: %.java
+#	javac -cp $(CUP_DIR)/java-cup-11b.jar:. $<

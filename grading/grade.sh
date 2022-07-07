@@ -11,7 +11,7 @@ do_one_test() {
 
     # Uncomment to see reference interpreter output only:
     # echo ""
-    # $REF_IMPL $OPTIONS -ct 5 $TESTCASE_DIR/$PROGRAM $INPUT
+    # $REF_IMPL $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT
     # echo ""
     # return
 
@@ -88,7 +88,8 @@ gzip -cd "$SUBMISSION_TGZ" | tar xf - -C $SUBMISSION_DIR
 
 # Build the submitted project
 cd $SUBMISSION_DIR
-make clean && make
+make clean
+make classes
 if [[ $? -ne 0 ]]; then
     echo WARNING: Couldn\'t run make. Is the .tgz directory structure incorrect?
     ACTUAL_MAKEFILE=$(find | grep '/Makefile\|/makefile')
@@ -99,7 +100,8 @@ if [[ $? -ne 0 ]]; then
     TESTCASE_DIR=$(realpath --relative-to=$ACTUAL $TESTCASE_DIR)
     echo Found $ACTUAL_MAKEFILE, trying to build and execute from $ACTUAL...
     cd $ACTUAL
-    make clean && make
+    make clean
+    make classes
     if [[ $? -ne 0 ]]; then
         exit 1
     fi
