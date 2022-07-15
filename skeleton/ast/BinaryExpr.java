@@ -16,30 +16,25 @@ public class BinaryExpr extends Expr {
         this.expr2 = expr2;
     }
 
-    @Override
-    public String toString() {
-        return "(" + simpleString() + ")";
+    public Expr getLeftExpr() {
+        return expr1;
     }
 
-    public String simpleString() {
+    public int getOperator() {
+        return operator;
+    }
+    
+    public Expr getRightExpr() {
+        return expr2;
+    }
+
+    @Override
+    public String toString() {
         String s = null;
         switch (operator) {
             case PLUS:  s = "+"; break;
             case MINUS: s = "-"; break;
         }
-        return expr1 + " " + s + " " + expr2;
-    }
-
-    @Override
-    Object eval() {
-        return doOperation(expr1.eval(), operator, expr2.eval());
-    }
-
-    static Object doOperation(Object value1, int operator, Object value2) {
-        switch (operator) {
-            case PLUS:  return (long)value1 + (long)value2;
-            case MINUS: return (long)value1 - (long)value2;
-        }
-        throw new RuntimeException("Unexpected in BinaryExpr.doOperation");
+        return "(" + expr1 + " " + s + " " + expr2 + ")";
     }
 }

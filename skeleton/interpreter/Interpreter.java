@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Random;
 
 import parser.ParserWrapper;
-import ast.Program;
+import ast.*;
 
 public class Interpreter {
 
@@ -98,8 +98,27 @@ public class Interpreter {
         } else if (gcType.equals("NoGC")) {
             // Nothing to do
         }
-        Object returnValue = astRoot.exec(arg);
+        Object returnValue = executeRoot(astRoot, arg);
         return returnValue;
+    }
+
+    Object executeRoot(Program astRoot, long arg) {
+        return evaluate(astRoot.getExpr());
+    }
+
+    Object evaluate(Expr expr) {
+        if (expr instanceof ConstExpr) {
+            return ((ConstExpr)expr).getValue();
+        } else if (expr instanceof BinaryExpr) {
+            BinaryExpr binaryExpr = (BinaryExpr)expr;
+            switch (binaryExpr.getOperator()) {
+                case BinaryExpr.PLUS: return (Long)evaluate(binaryExpr.getLeftExpr()) + (Long)evaluate(binaryExpr.getRightExpr());
+                case BinaryExpr.MINUS: return (Long)evaluate(binaryExpr.getLeftExpr()) - (Long)evaluate(binaryExpr.getRightExpr());
+                default: throw new RuntimeException("Unhandled operator");
+            }
+        } else {
+            throw new RuntimeException("Unhandled Expr type");
+        }
     }
 
 	public static void fatalError(String message, int processReturnCode) {

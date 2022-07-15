@@ -11,11 +11,11 @@ public class Program extends ASTNode {
         this.expr = expr;
     }
 
-    public void println(PrintStream ps) {
-        ps.println(expr);
+    public Expr getExpr() {
+        return expr;
     }
 
-    public Object exec(long argument) {
-        return expr.eval();
+    public void println(PrintStream ps) {
+        ps.println(expr);
     }
 }
