@@ -3,7 +3,7 @@ int main(int arg) {
 	int b = minTiles(arg+1, arg+2);
 	int c = minTiles(arg+2, arg+3);
 	int d = minTiles(arg+3, arg+4);
-	if(( (a+b+c-d)<=(a-b-c) || (a<c) || (a>d) && (!a!=(-arg+b)) ))
+	if((( (a+b+c-d)<=(a-b-c) || (a<c) || (a>d)) && (!a!=(-arg+b)) ))
 		return (((((a)))));
 	if(!a<=b && b==c)
 		return b;
