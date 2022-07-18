@@ -58,7 +58,7 @@ white_space = {new_line} | [ \t\f]
 
 <YYINITIAL>{
 /* int literals */
-{IntLiteral} { return symbol("Intconst", INTCONST, new Long(Long.parseLong(yytext()))); }
+{IntLiteral} { return symbol("Intconst", INTCONST, Long.parseLong(yytext())); }
 
 /* separators */
 "+"               { return symbol("+",  PLUS); }

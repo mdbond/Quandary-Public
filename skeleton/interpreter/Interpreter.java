@@ -76,8 +76,9 @@ public class Interpreter {
         }
         //astRoot.println(System.out);
         interpreter = new Interpreter(astRoot);
-        Object returnValue = interpreter.exec(gcType, heapBytes, quandaryArg).toString();
-        System.out.println("Interpreter returned " + returnValue);
+        interpreter.initMemoryManager(gcType, heapBytes);
+        String returnValueAsString = interpreter.executeRoot(astRoot, quandaryArg).toString();
+        System.out.println("Interpreter returned " + returnValueAsString);
     }
 
     final Program astRoot;
@@ -88,7 +89,7 @@ public class Interpreter {
         this.random = new Random();
     }
 
-    Object exec(String gcType, long heapBytes, long arg) {
+    void initMemoryManager(String gcType, long heapBytes) {
         if (gcType.equals("Explicit")) {
             throw new RuntimeException("Explicit not implemented");            
         } else if (gcType.equals("MarkSweep")) {
@@ -98,8 +99,6 @@ public class Interpreter {
         } else if (gcType.equals("NoGC")) {
             // Nothing to do
         }
-        Object returnValue = executeRoot(astRoot, arg);
-        return returnValue;
     }
 
     Object executeRoot(Program astRoot, long arg) {
