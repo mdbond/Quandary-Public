@@ -21,4 +21,12 @@
 1 t10.calc          42
 1 t11.calc          42
 1 t12.calc          42
+2 reallysimple2.calc 42
+2 simple.calc        42
+2 medium.calc        42
+2 complex2.calc      42
+2 t1.calc            42
+2 t6.calc            42
+2 t8.calc            42
+2 t12b.calc          42
 0 isrefint.q        42
