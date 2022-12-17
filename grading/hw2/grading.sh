@@ -7,7 +7,7 @@ fi
 
 # Setup
 score=0
-quandry=$1
+quandary=$1
 homework=$2
 
 # Functions
@@ -17,7 +17,7 @@ run_test() {
 	chmod 777 test.q
 	
 	# Run test file
-	output=$($quandry ./test.q 20)
+	output=$($quandary ./test.q 20)
 	points=`expr "$output" : 'Interpreter returned \(.*\)Quandary'`
 	# echo $output
 	if [[ $output != *"error"* ]]
