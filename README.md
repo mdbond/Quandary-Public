@@ -1,3 +1,3 @@
 ### Quandary-Public
 
-Read quandary.pdf for complete documentation.
+See quandary.pdf for complete documentation.
