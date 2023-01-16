@@ -1,0 +1,12 @@
+0 isrefint.q 42 -et -memoize blah -heapsize 1638400
+1 fibSimple.q 35 -memoize fibRecursive -heapsize 1638400
+1 fibSimple.q 45 -memoize fibRecursive -heapsize 1638400
+1 fibserial.q 30 -memoize fibRecursive -memoize fibMemHog -heapsize 1638400
+1 fibserial.q 40 -memoize fibRecursive -memoize fibMemHog -heapsize 1638400
+1 max.q 32 -memoize max -heapsize 1638400
+1 max.q 48 -memoize max -heapsize 1638400
+1 serialqsort.qet 42 -et -heapsize 1638400
+1 listoflists2.qet 42 -et -heapsize 1638400
+1 max.qet 36 -et -memoize max -heapsize 1638400
+1 max.qet 50 -et -memoize max -heapsize 1638400
+0 isrefint.q 42 -et -memoize blah -heapsize 1638400
