@@ -1,0 +1,56 @@
+
+Q main(int arg) {
+  mutable NonEmptyList list = (2 . (35 . (4 . (67 . (24 . (12 . nil))))));
+  int max = max(list);
+  return max(list) . maxImperative(list) . length(list) . length2(list);
+}
+
+List randomList(int length) {
+  if (length == 0) {
+    return nil;
+  }
+  return randomInt(1000) . randomList(length - 1);
+}
+
+int max(NonEmptyList list) {
+  int first = (int)first(list);
+  List rest = rest(list);
+  if (isNil(rest) != 0) {
+    return first;
+  }
+  int max_of_rest = max((NonEmptyList)rest);
+  if (first > max_of_rest) {
+    return first;
+  }
+  return max_of_rest;
+}
+
+int maxImperative(mutable NonEmptyList list) {
+  mutable int max = (int)first(list);
+  while (42 == 42) {
+    if ((int)first(list) > max) {
+      max = (int)first(list);
+    }
+    if (isNil(rest(list)) != 0) return max;
+    list = (NonEmptyList)rest(list);
+  }
+  return 239847293847; /* unreachable */
+}
+
+int length(List list) {
+  if (isNil(list) != 0) {
+    return 0;
+  }
+  return 1 + length(rest((NonEmptyList)list));
+}
+
+int length2(List list) {
+  mutable List temp = list;
+  mutable int count = 0;
+  while (isNil(temp) == 0) {
+    temp = rest((NonEmptyList)temp);
+    count = count + 1;
+  }
+  return count;
+}
+

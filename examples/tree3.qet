@@ -1,0 +1,18 @@
+Q main(int arg) {
+    NonNilRef tree = makeTree(arg);    
+    return sum(tree);
+}
+
+NonNilRef makeTree(int depth) {
+    if (depth == 0)
+        return (NonNilRef)(Ref)nil;
+    if (depth == 1)
+        return 1 . 1;
+    return makeTree(depth - 1) . makeTree(depth - 1);
+}
+
+int sum(NonNilRef tree) {
+    if (isAtom(left(tree)) != 0)
+        return (int)left(tree) + (int)right(tree);
+    return sum((NonNilRef)left(tree)) + sum((NonNilRef)right(tree));
+}

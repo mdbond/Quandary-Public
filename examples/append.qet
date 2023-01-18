@@ -1,0 +1,17 @@
+mutable Q main(int arg) {
+  mutable List list = nil;
+  list = addR(list, 4);
+  list = addR(list, 3);
+  list = addR(list, 5);
+  list = addR(list, 42);
+  return list;
+}
+
+/* non-mutating add */
+NonEmptyList addR(List list, int elem) {
+  if (isNil(list) != 0) {
+    return elem . nil;
+  }
+  return first((NonEmptyList)list) .
+         addR(rest((NonEmptyList)list), elem);
+}
