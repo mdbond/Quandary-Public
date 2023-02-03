@@ -65,7 +65,7 @@ SUBMISSION_DIR=$(mktemp -d)
 
 # Remove tmp directory
 INITIAL_DIR=$(pwd)
-trap "cd $INITIAL_DIR && rm -rf $SUBMISSION_DIR" EXIT
+trap "cd '$INITIAL_DIR' && rm -rf $SUBMISSION_DIR" EXIT
 
 if ! [ -x "$(command -v realpath)" ]; then
     echo 'Command realpath is not installed. Trying something else, but $2 and $4 need to be relative paths for it to work!'
