@@ -1,0 +1,27 @@
+0 isrefint.q 42 -heapsize 1638400
+2 mutable2.q 5 -heapsize 1638400
+2 mutable3.q 5 -heapsize 1638400 # static
+2 mutable4.q 5 -heapsize 1638400
+2 mutable5.q 5 -heapsize 1638400
+2 mutable6.q 5 -heapsize 1638400 # static
+2 mutable7.q 5 -heapsize 1638400 # static
+2 mutable8.q 5 -heapsize 1638400
+2 casting1.q 42 -heapsize 1638400 # static
+2 casting2.q 42 -heapsize 1638400
+2 casting3.q 42 -heapsize 1638400
+2 casting4.q 42 -heapsize 1638400 # dynamic cast
+2 casting6.q 42 -heapsize 1638400 # static
+2 vardecl1.q 4 -heapsize 1638400 # static
+2 vardecl2.q 4 -heapsize 1638400
+2 vardecl3.q 4 -heapsize 1638400 # static
+2 vardecl4.q 4 -heapsize 1638400 # static
+2 vardecl4b.q 4 -heapsize 1638400
+2 vardecl5.q 4 -heapsize 1638400 # dynamic nil
+2 vardecl6.q 4 -heapsize 1638400 # dynamic cast
+2 niloops3.q 10 -heapsize 1638400 # dynamic nil
+2 sortdet10.q 42 -heapsize 1638400 # static
+2 castingabout.q -4 -heapsize 1638400
+2 castingabout.q 5 -heapsize 1638400 # dynamic cast
+2 noisyMutablePara.q 42 -heapsize 1638400
+2 primes8.q 142 -heapsize 1638400 # static
+0 isrefint.q 42 -heapsize 1638400
