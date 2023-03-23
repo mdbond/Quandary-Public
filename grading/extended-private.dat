@@ -1,0 +1,52 @@
+0 isrefint.q 42 -et -memoize blah -heapsize 1638400
+1 fibSimple.q 35 -memoize fibRecursive -heapsize 1638400
+1 fibSimple.q 45 -memoize fibRecursive -heapsize 1638400
+1 fibSimple.q 55 -memoize fibRecursive -heapsize 1638400
+1 fibserial.q 30 -memoize fibRecursive -memoize fibMemHog -heapsize 1638400
+1 fibserial.q 40 -memoize fibRecursive -memoize fibMemHog -heapsize 1638400
+1 fibserial.q 45 -memoize fibRecursive -memoize fibMemHog -heapsize 1638400
+1 max.q 32 -memoize max -heapsize 1638400
+1 max.q 41 -memoize max -heapsize 1638400
+1 max.q 48 -memoize max -heapsize 1638400
+1 tree.q 25 -memoize sum -heapsize 1638400
+1 tree.q 35 -memoize sum -heapsize 1638400
+1 tree.q 45 -memoize sum -heapsize 1638400
+1 tree2.q 25 -memoize makeTree -heapsize 1638400
+1 tree2.q 35 -memoize makeTree -heapsize 1638400
+1 tree2.q 45 -memoize makeTree -heapsize 1638400
+1 tree3.q 25 -memoize makeTree -memoize sum -heapsize 1638400
+1 tree3.q 35 -memoize makeTree -memoize sum -heapsize 1638400
+1 tree3.q 45 -memoize makeTree -memoize sum -heapsize 1638400
+1 simple.qet 42 -et -heapsize 1638400
+1 simple2.qet 42 -et -heapsize 1638400 # dynamic checking error
+1 serialqsort.qet 42 -et -heapsize 1638400
+1 sortdet.qet 42 -et -heapsize 1638400 # static checking error
+1 sortdet2.qet 42 -et -heapsize 1638400
+1 sortdet3.qet 42 -et -heapsize 1638400
+1 sortdet4.qet 42 -et -heapsize 1638400 # dynamic checking error
+1 sortdet5.qet 42 -et -heapsize 1638400
+1 listoflists2.qet 42 -et -heapsize 1638400
+1 castingabout.qet -4 -et -heapsize 1638400
+1 castingabout.qet 4 -et -heapsize 1638400 # dynamic checking error
+1 castingabout.qet 10 -et -heapsize 1638400 # dynamic checking error
+1 casts2.qet 4 -et -heapsize 1638400 # dynamic checking error
+1 casts2.qet 5 -et -heapsize 1638400
+1 append.qet 42 -et -heapsize 1638400
+1 append2.qet 42 -et -heapsize 1638400 # static checking error
+1 append3.qet 42 -et -heapsize 1638400 # dynamic checking error
+1 append4.qet 42 -et -heapsize 1638400 # static checking error
+1 listsdet.qet 42 -et -heapsize 1638400
+1 listsdet2.qet 42 -et -heapsize 1638400 # static checking error
+1 listsdet3.qet 42 -et -heapsize 1638400 # dynamic checking error
+1 primes.qet 100 -et -heapsize 1638400
+1 primes2.qet 100 -et -heapsize 1638400 # static checking error
+1 max.qet 36 -et -memoize max -heapsize 1638400
+1 max.qet 50 -et -memoize max -heapsize 1638400
+1 max.qet 67 -et -memoize max -heapsize 1638400
+1 max2.qet 42 -et -memoize max -heapsize 1638400 # static checking error
+1 max.q 36 -et -memoize max -heapsize 1638400 # static checking error
+1 tree3.qet 25 -et -memoize makeTree -memoize sum -heapsize 1638400
+1 tree3.qet 35 -et -memoize makeTree -memoize sum -heapsize 1638400
+1 tree3.qet 45 -et -memoize makeTree -memoize sum -heapsize 1638400
+1 tree3.q 25 -et -memoize makeTree -memoize sum -heapsize 1638400 # static checking error
+0 isrefint.q 42 -et -memoize blah -heapsize 1638400

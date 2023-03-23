@@ -1,0 +1,28 @@
+
+Q main(int arg) {
+    List list = (6 . (2 . (23 . (4 . (45 . (22 . (24 . (43 . (3 . (72 . (2 . nil)))))))))));
+    List sortedList = sort(list);
+    return sortedList;
+}
+
+List randomList(int length) {
+    if (length == 0) {
+        return nil;
+    }
+    return randomInt(100000) . randomList(length - 1);
+}
+
+List sort(List list) {
+    if (isNil(list) != 0) return nil;
+    return insert((int)first((NonEmptyList)list), sort(rest((NonEmptyList)list)));
+}
+
+List insert(int elem, List list) {
+    if (isNil(list) != 0) {
+        return elem . nil;
+    }
+    if ((int)elem <= (int)left((NonEmptyList)list)) {
+        return elem . list;
+    }
+    return first((NonEmptyList)list) . insert(elem, rest((NonEmptyList)list));
+}

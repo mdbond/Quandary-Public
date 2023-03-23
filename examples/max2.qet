@@ -1,0 +1,23 @@
+Q main(int arg) {
+    return max((NonEmptyList)sortedList(1, arg));
+}
+
+int max(NonEmptyList list) { /* list is a non-empty list of integers */
+    if (isNil(rest(list)) != 0) return (int)first(list);
+    if ((int)first(list) > max((NonEmptyList)rest(list))) {
+        return (int)first(list);
+    }
+    return max((NonEmptyList)rest(list));
+}
+
+List sortedList(int n, int max) {
+    if (n > max)
+        return nil;
+    return n . sortedList(n + 1, max);
+}
+
+int length(List list) {
+    if (isNil(list) != 0)
+        return 0;
+    return 1 + length(right((NonEmptyList)list));
+}

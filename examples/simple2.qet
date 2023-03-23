@@ -1,0 +1,4 @@
+Ref main(int arg) {
+    NonNilRef x = 5 . nil;
+    return (List)first((NonEmptyList)x);
+}
