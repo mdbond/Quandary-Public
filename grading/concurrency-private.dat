@@ -1,0 +1,52 @@
+0 isrefint.q 42 -heapsize 1638400
+1 bubblishsort4.q 42 -heapsize 1638400
+1 bubblishsort6.q 42 -heapsize 1638400
+1 bubblishsort.q 42 -heapsize 1638400
+1 concfact.q 11 -heapsize 1638400
+1 concfact.q 8 -heapsize 1638400
+1 conclist2.q 300 -heapsize 1638400
+1 conclist.q 555 -heapsize 1638400
+1 concset.q 42 -heapsize 1638400
+1 concset2.q 10 -heapsize 1638400
+1 concsortedlist2.q 150 -heapsize 1638400
+1 concsortedlist3.q 50 -heapsize 1638400
+1 concsortedlist5.q 38 -heapsize 1638400
+1 concsum2.q 222 -heapsize 1638400
+1 concsum3.q 345 -heapsize 1638400
+1 concsum.q 88 -heapsize 1638400
+1 concsum.q 238 -heapsize 1638400
+1 counter2.q 800 -heapsize 1638400
+1 drfcounter2.q 42 -heapsize 1638400 # relies on concurrent execution
+1 drfcounter5.q 2400 -heapsize 1638400 # relies on concurrent execution
+1 drfcounter5.q 2345 -heapsize 1638400 # relies on concurrent execution
+1 fibpar2.q 20 -heapsize 1638400
+1 fibpar3.q 23 -heapsize 1638400
+1 fibpar3.q 16 -heapsize 1638400
+1 fibpar.q 26 -heapsize 1638400
+1 indep2.q 2000 -heapsize 1638400
+1 indep2.q 1432 -heapsize 1638400
+1 pcc3.q 42 -heapsize 1638400 # relies on concurrent execution
+1 pcfixed2.q 42 -heapsize 1638400
+1 pcfixed5.q 42 -heapsize 1638400 # relies on concurrent execution
+1 pcfixed.q 42 -heapsize 1638400
+1 relies.q 42 -heapsize 1638400 # relies on concurrent execution
+1 relies2.q 20 -heapsize 1638400 # relies on concurrent execution
+1 qsort2.q 42 -heapsize 1638400
+1 qsort7.q 42 -heapsize 1638400
+1 simpleconc2.q 20 -heapsize 1638400
+1 simpleconc3.q 9 -heapsize 1638400
+1 simplelock2.q 42 -heapsize 1638400
+1 steps2.q 3723 -heapsize 1638400 # relies on concurrent execution
+1 steps2.q 6789 -heapsize 1638400 # relies on concurrent execution
+1 steps3.q 2345 -heapsize 1638400 # relies on concurrent execution
+1 steps3.q 1234 -heapsize 1638400 # relies on concurrent execution
+1 steps5.q 300 -heapsize 1638400 # relies on concurrent execution
+1 steps5.q 500 -heapsize 1638400 # relies on concurrent execution
+1 steps6.q 50 -heapsize 1638400 # relies on concurrent execution
+1 steps6.q 100 -heapsize 1638400 # relies on concurrent execution
+1 steps.q 42 -heapsize 1638400 # relies on concurrent execution
+1 turns2.q 27 -heapsize 1638400 # relies on concurrent execution
+1 turns2.q 30 -heapsize 1638400 # relies on concurrent execution
+1 turns3.q 5 -heapsize 1638400 # relies on concurrent execution
+1 turns3.q 15 -heapsize 1638400 # relies on concurrent execution
+0 isrefint.q 42 -heapsize 1638400
