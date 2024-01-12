@@ -67,27 +67,16 @@ SUBMISSION_DIR=$(mktemp -d)
 INITIAL_DIR=$(pwd)
 trap "cd '$INITIAL_DIR' && rm -rf $SUBMISSION_DIR" EXIT
 
-if [[ "$2" = /* ]]
-then
-  REF_IMPL="$2"
+if ! [ -x "$(command -v realpath)" ]; then
+    echo 'Command realpath is not installed. Trying something else, but $2 and $4 need to be relative paths for it to work!'
+    REF_IMPL="../$2"
+    TESTCASES_FILE="../$3"
+    TESTCASE_DIR="../$4"
 else
-  REF_IMPL="$INITIAL_DIR/$2"
+    REF_IMPL=$(realpath --relative-to=$SUBMISSION_DIR $2)
+    TESTCASES_FILE=$(realpath --relative-to=$SUBMISSION_DIR $3)
+    TESTCASE_DIR=$(realpath --relative-to=$SUBMISSION_DIR $4)
 fi
-
-if [[ "$3" = /* ]]
-then
-  TESTCASES_FILE="$3"
-else
-  TESTCASES_FILE="$INITIAL_DIR/$3"
-fi
-
-if [[ "$4" = /* ]]
-then
-  TESTCASE_DIR="$4"
-else
-  TESTCASE_DIR="$INITIAL_DIR/$4"
-fi
-
 TIMEOUT=""
 if [ "$#" -eq 5 ]; then
     TIMEOUT="timeout $5"
