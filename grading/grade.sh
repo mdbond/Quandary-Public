@@ -61,7 +61,7 @@ fi
 SUBMISSION_TGZ="$1"
 
 export TMPDIR=.
-SUBMISSION_DIR=$(mktemp -d)
+SUBMISSION_DIR=$(mktemp -d 2>/dev/null || mktemp -d -t '.')
 
 # Remove tmp directory on exit
 INITIAL_DIR=$(pwd)
