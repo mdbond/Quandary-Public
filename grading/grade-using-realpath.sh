@@ -16,8 +16,8 @@ do_one_test() {
     # return
 
     # Get interpreter return and quandary process return (last 2 lines) of ref and sub implementations
-    REF_OUT=$($REF_IMPL $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -2)
-    SUB_OUT=$($TIMEOUT ./quandary $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -2)
+    REF_OUT=$("$REF_IMPL" $OPTIONS "$TESTCASE_DIR/$PROGRAM" $INPUT 2>&1 | tail -2)
+    SUB_OUT=$($TIMEOUT ./quandary $OPTIONS "$TESTCASE_DIR/$PROGRAM" $INPUT 2>&1 | tail -2)
     # If the ref quandary process exited with a nonzero code, we only care about
     # the quandary process return value (the last line)
     if [[ $(echo "$REF_OUT" | tail -1) != "Quandary process returned 0" ]]; then
@@ -36,7 +36,7 @@ do_one_test() {
             echo FAILED
         fi
         # Uncomment to debug FAILED test cases only:
-        # echo REF_OUT is $REF_OUT 
+        # echo REF_OUT is $REF_OUT
         # echo SUB_OUT is $SUB_OUT
     fi
     # Uncomment to debug ALL test cases:
@@ -58,12 +58,12 @@ if [ -z "$CUP_DIR" ]; then
     exit
 fi
 
-SUBMISSION_TGZ=$1
+SUBMISSION_TGZ="$1"
 
 export TMPDIR=.
 SUBMISSION_DIR=$(mktemp -d)
 
-# Remove tmp directory
+# Remove tmp directory on exit
 INITIAL_DIR=$(pwd)
 trap "cd '$INITIAL_DIR' && rm -rf $SUBMISSION_DIR" EXIT
 
@@ -77,6 +77,7 @@ else
     TESTCASES_FILE=$(realpath --relative-to=$SUBMISSION_DIR $3)
     TESTCASE_DIR=$(realpath --relative-to=$SUBMISSION_DIR $4)
 fi
+
 TIMEOUT=""
 if [ "$#" -eq 5 ]; then
     TIMEOUT="timeout $5"
@@ -100,7 +101,7 @@ SCORE=0
 while IFS= read -r line; do
     #echo do_one_test $line
     do_one_test $line
-done <$TESTCASES_FILE
+done < "$TESTCASES_FILE"
 
 echo Total score: $SCORE out of $MAX_SCORE
 
