@@ -60,12 +60,12 @@ fi
 
 SUBMISSION_TGZ="$1"
 
-export TMPDIR=.
-SUBMISSION_DIR=$(mktemp -d -t '.'  2>/dev/null || mktemp -d)
+SUBMISSION_DIR="./tmp.$RANDOM$RANDOM"
+mkdir "$SUBMISSION_DIR"
 
 # Remove tmp directory on exit
 INITIAL_DIR=$(pwd)
-trap "cd '$INITIAL_DIR' && rm -rf $SUBMISSION_DIR" EXIT
+trap "cd '$INITIAL_DIR' && rm -rf '$SUBMISSION_DIR'" EXIT
 
 if [[ "$2" = /* ]]
 then
@@ -95,10 +95,10 @@ fi
 
 # Extract the submitted .tgz to a new directory
 echo Extracting submission to $SUBMISSION_DIR, will perform testing there
-gzip -cd "$SUBMISSION_TGZ" | tar xf - -C $SUBMISSION_DIR
+gzip -cd "$SUBMISSION_TGZ" | tar xf - -C "$SUBMISSION_DIR"
 
 # Build the submitted project
-cd $SUBMISSION_DIR
+cd "$SUBMISSION_DIR"
 make clean
 make classes
 if [[ $? -ne 0 ]]; then
