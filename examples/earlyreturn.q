@@ -6,6 +6,6 @@ int main (int arg){
       int y = x + 1;
       return y;
     }
-    int z = y + 1;
+    int z = x + 1 + 1;
     return z;
 }
