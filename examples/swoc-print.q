@@ -1,5 +1,4 @@
 int main(int arg) {
-      return arg;
-      return 0;
+      print 2;
       return 1;
 }

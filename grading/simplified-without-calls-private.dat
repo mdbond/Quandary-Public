@@ -5,7 +5,7 @@
 2 swoc-calc-with-arg-i64.q 101
 2 swoc-var.q 4
 2 swoc-var.q 17
-2 swoc-multi-return.q 4
+2 swoc-print.q 42
 2 swoc-if.q 4
 2 swoc-if.q 5
 2 swoc-if-else.q 4

@@ -10,9 +10,7 @@ int main(int arg) {
                 {
                     int x = a - 7;
                     return arg - 1024000000000;
-                    return x;
                 }
-                return 3;
             }
         }
         {
@@ -22,13 +20,10 @@ int main(int arg) {
             {
                 {
                     return 4+arg;
-                    return 6;
                 }
-                return arg;
             }
             return 83;
         }
-        return 2;
     }
     return 7;
 }
