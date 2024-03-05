@@ -1,6 +1,5 @@
 0 isrefint.q 42
-1 swoc-nesting.q 4
-1 swoc-nesting.q 3
+2 simplecall.q 4
 2 swc-built-in.q 42
 2 swc-recursive-main.q 42
 2 swc-pow.q 3
