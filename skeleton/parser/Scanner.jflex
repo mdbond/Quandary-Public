@@ -57,14 +57,18 @@ white_space = {new_line} | [ \t\f]
 %%
 
 <YYINITIAL>{
-/* int literals */
+/* This is where tokens are recognized. Every token recognized by the scanner corresponds to a terminal in the parser's grammar. */
+
+/* int literal token */
 {IntLiteral} { return symbol("Intconst", INTCONST, Long.parseLong(yytext())); }
 
-/* separators */
+/* other tokens (you can add more tokens here) */
 "+"               { return symbol("+",  PLUS); }
 "-"               { return symbol("-",  MINUS); }
 "("               { return symbol("(",  LPAREN); }
 ")"               { return symbol(")",  RPAREN); }
+
+/* You shouldn't need to modify anything below this */
 
 /* comments */
 "/*" [^*] ~"*/" | "/*" "*"+ "/"
