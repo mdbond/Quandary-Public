@@ -1,0 +1,19 @@
+0  isrefint.q      42 -heapsize 1638400
+4  drfcounter2.q   42 -heapsize 1638400 # relies on concurrent execution
+4  drfcounter5.q  187 -heapsize 1638400 # relies on concurrent execution
+4  drfcounter5.q 1853 -heapsize 1638400 # relies on concurrent execution
+4  pcc4.q          42 -heapsize 1638400 # relies on concurrent execution
+4  pcfixed3.q      42 -heapsize 1638400 # relies on concurrent execution
+4  pcfixed4.q      42 -heapsize 1638400 # relies on concurrent execution
+4  turns2.q        44 -heapsize 1638400 # relies on concurrent execution
+4  turns3.q        38 -heapsize 1638400 # relies on concurrent execution
+4  turns2.q        27 -heapsize 1638400 # relies on concurrent execution
+4  steps2.q      1997 -heapsize 1638400 # relies on concurrent execution
+4  steps3.q      2013 -heapsize 1638400 # relies on concurrent execution
+4  steps6.q       129 -heapsize 1638400 # relies on concurrent execution
+4  steps5.q        29 -heapsize 1638400 # relies on concurrent execution
+4  steps3.q       543 -heapsize 1638400 # relies on concurrent execution
+4  steps2.q       295 -heapsize 1638400 # relies on concurrent execution
+4  steps5.q       111 -heapsize 1638400 # relies on concurrent execution
+4  steps6.q        73 -heapsize 1638400 # relies on concurrent execution
+0  isrefint.q      42 -heapsize 1638400
