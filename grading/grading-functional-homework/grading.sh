@@ -50,5 +50,11 @@ run_test ./q4/test2.q
 run_test ./q4/test3.q
 run_test ./q4/test4.q
 
+# Q5
+run_test ./q5/test1.q
+run_test ./q5/test2.q
+run_test ./q5/test3.q
+run_test ./q5/test4.q
+
 # Results
 echo "Score: $score"
