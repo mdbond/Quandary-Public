@@ -27,18 +27,21 @@ parser code {:
 
 :};
 
-terminal PLUS, MINUS, LPAREN, RPAREN;
+terminal PLUS, MINUS, LPAREN, RPAREN, TIMES, SEMI, RETURN, UMINUS;
 terminal Long    INTCONST;
 
 non terminal Program         program;
 non terminal Expr            expr;
 non terminal BinaryExpr      binaryExpr;
+non terminal UnaryExpr       unaryExpr;
 
 precedence left PLUS, MINUS;
+precedence left TIMES;
+precedence left UMINUS;
 
 start with program;
 
-program ::= expr:e
+program ::= RETURN expr:e SEMI
             {: RESULT = new Program(e, loc(eleft, eright)); :}
          ;
 
@@ -48,10 +51,15 @@ expr ::= INTCONST:c
          {: RESULT = e; :}
       |  LPAREN expr:e RPAREN
          {: RESULT = e; :}
+      |  MINUS expr:e1
+         {: RESULT = new UnaryExpr(e1, UnaryExpr.MINUS, loc(e1left,e1right)); :}
+         %prec UMINUS   
       ;
 
 binaryExpr ::= expr:e1 PLUS expr:e2
                {: RESULT = new BinaryExpr(e1, BinaryExpr.PLUS, e2, loc(e1left, e1right)); :}
             |  expr:e1 MINUS expr:e2
                {: RESULT = new BinaryExpr(e1, BinaryExpr.MINUS, e2, loc(e1left, e1right)); :}
-            ;
+            |  expr:e1 TIMES expr:e2
+               {: RESULT = new BinaryExpr(e1, BinaryExpr.TIMES, e2, loc(e1left, e1right)); :}
+                           ;
