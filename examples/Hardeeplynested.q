@@ -4,10 +4,10 @@ int main(int arg) {
         {
             int y = 10;
             if (arg > 20) {
-                return y + x; // Returns 15
+                return y + x; 
             }
-            return y - x; // Returns 5
+            return y - x; 
         }
     }
-    return x * 2; // Returns 10
+    return x * 2; 
 }

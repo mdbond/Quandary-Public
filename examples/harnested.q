@@ -1,10 +1,15 @@
 int main(int arg) {
-    int x = 100;
-    if (arg > 0) {
-        int x = arg; // Shadowing the outer x
+    if (arg > 10) {
+        int x = arg; 
         if (x > 5) {
-            return x * 2;
+            int f = x * 2;
+            return f;
         }
+        else { int f = x + 10;}
     }
-    return x;
+    else{
+        int x = arg + 4;
+        return x;
+    }
+    return 0;
 }
