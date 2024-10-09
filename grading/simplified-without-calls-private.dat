@@ -1,6 +1,7 @@
-0 isrefint.q 42  
+0 isrefint.q 42
 2 Hararithoutflow.q 5
-2 Harmodulo.q 12
+2 swoc-print.q 42
+2 sBasicCond.q 42
 2 Harcomp.q 8
 2 Hararithoutflow.q 1000
 2 Harmultiplere.q 1
@@ -16,7 +17,6 @@
 2 swoc-calc.q 42
 2 swoc-calc-with-arg-i64.q 1011
 2 earlyreturn.q 10
-2 Harassoprecedence.q 777
 2 cj-control-flow.q 15
 2 sMoreCond.q 2022
 2 ident.q 42
@@ -24,4 +24,4 @@
 2 isPrime.q 13
 2 morevars3.q 15
 2 vars4.q 42
-0 isrefint.q 42  
+0 isrefint.q 42
