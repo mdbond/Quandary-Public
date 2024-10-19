@@ -1,0 +1,27 @@
+0 isrefint.q 42         # should fail
+2 simplecall.q 10
+2 simplecall4.q 15
+2 cj-fn-no-args.q 42
+2 oddeven.q 654
+2 oddeven2.q 353
+2 factsimple.q 8
+2 lg.q 3412
+2 isPrimeImmutable.q 143
+2 recurmain2.q 10
+2 params2.q 30
+2 assignStmt.q 35
+2 hope2.q 15
+2 swc-testbit.q 13
+2 printstuff2.q 9
+2 sPalindrome.q 3341
+2 shortcircuit2.q 3
+2 sqroot.q 15000
+2 swc-pow.q 18
+2 messyFunc.q 25
+2 randomtest.q 1000
+2 sSum.q 345
+2 randomNum.q 10
+2 sum2.q 45
+2 mutualrecur.q 30
+2 params3.q 40
+0 isrefint.q 42         # should fail
