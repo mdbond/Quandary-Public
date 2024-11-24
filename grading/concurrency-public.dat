@@ -117,7 +117,7 @@
 1  fibpar3.q       22 -heapsize 1638400
 1  indep2.q      1250 -heapsize 1638400
 1  pcfixed3.q      42 -heapsize 1638400
-1  pcfixed4.q      42 -heapsize 1638400
+1  pcfixed4.q      42 -heapsize 1638400 # relies on concurrent execution
 1  qsort3.q        42 -heapsize 1638400
 1  drfcounter2.q   42 -heapsize 1638400 # relies on concurrent execution
 1  drfcounter5.q  500 -heapsize 1638400 # relies on concurrent execution
