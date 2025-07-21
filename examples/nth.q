@@ -1,4 +1,4 @@
-mutable Q main(int arg) {
+Q main(int arg) {
     return nth(reverse(fibs(arg)), arg);
 }
 

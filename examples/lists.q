@@ -25,21 +25,9 @@ int max(Ref list) {
   return max_of_rest;
 }
 
-int maxImperative(mutable Ref list) {
-  mutable int max = (int)left(list);
-  while (42 == 42) {
-    if ((int)left(list) > max) {
-      max = (int)left(list);
-    }
-    if (isNil(right(list)) != 0) return max; /* only way to exit loop */
-    list = (Ref)right(list);
-  }
-  return 239847293847; /* unreachable */
-}
-
 int maxRecursive(Ref list) {
   return maxHelper(right(list),
-                   (int)left(list)); 
+                   (int)left(list));
 }
 
 int maxHelper(Ref list, int max) {
@@ -58,14 +46,4 @@ int length(Ref list) {
     return 0;
   }
   return 1 + length(right(list));
-}
-
-int length2(Ref list) {
-  mutable Ref temp = list;
-  mutable int count = 0;
-  while (isNil(temp) == 0) {
-    temp = right(temp);
-    count = count + 1;
-  }
-  return count;
 }

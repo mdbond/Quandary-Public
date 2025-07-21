@@ -1,4 +1,4 @@
-mutable Q main(int arg) {
+Q main(int arg) {
   Ref data = (3 . (4 . (5 . (2 . (3 . (6 . nil))))));
   return sum(data);
 }
