@@ -137,7 +137,6 @@
 2 sRevList.q        12 -heapsize 1638400
 2 sfact.q           12 -heapsize 1638400
 2 max4.q            42 -heapsize 1638400
-2 randomlist.q      32 -heapsize 1638400
 2 garbage2.q      4000 -heapsize 1638400
 2 calc2.q           20 -heapsize 1638400
 2 flip.q            25 -heapsize 1638400
