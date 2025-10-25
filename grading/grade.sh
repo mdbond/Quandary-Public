@@ -28,6 +28,14 @@ do_one_test() {
     MAX_SCORE=$((MAX_SCORE + POINTS))
     if [ "$REF_OUT" == "$SUB_OUT" ]; then
         echo PASSED
+        if [ "$PROGRAM" == "isrefint.q" ]; then
+            echo 'isrefint.q PASSED, which means something is wrong with how the grading script was run!'
+            echo 'Running reference interpreter again and showing output:'
+            "$REF_IMPL" $OPTIONS "$TESTCASE_DIR/$PROGRAM" $INPUT
+            echo 'Running submitted interpreter again and showing output:'
+            $TIMEOUT ./quandary $OPTIONS "$TESTCASE_DIR/$PROGRAM" $INPUT
+            exit
+        fi
         SCORE=$((SCORE + POINTS))
     else
         if [ "$SUB_OUT" == "" ]; then
