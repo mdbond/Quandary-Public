@@ -15,6 +15,11 @@ do_one_test() {
     # echo ""
     # return
 
+    if [[ ! -f "$TESTCASE_DIR/$PROGRAM" ]]; then
+      echo "$PROGRAM not found"
+      exit 1
+    fi
+
     # Get interpreter return and quandary process return (last 2 lines) of ref and sub implementations
     REF_OUT=$("$REF_IMPL" $OPTIONS "$TESTCASE_DIR/$PROGRAM" $INPUT 2>&1 | tail -2)
     SUB_OUT=$($TIMEOUT ./quandary $OPTIONS "$TESTCASE_DIR/$PROGRAM" $INPUT 2>&1 | tail -2)
