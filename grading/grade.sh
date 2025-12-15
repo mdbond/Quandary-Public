@@ -103,6 +103,11 @@ fi
 
 TIMEOUT=""
 if [ "$#" -eq 5 ]; then
+    if ! command -v timeout &> /dev/null
+    then
+        echo "timeout command could not be found"
+        exit 1
+    fi
     TIMEOUT="timeout $5"
 fi
 
