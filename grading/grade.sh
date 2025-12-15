@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 do_one_test() {
     POINTS=$1
     PROGRAM=$2
@@ -22,7 +24,7 @@ do_one_test() {
 
     # Get interpreter return and quandary process return (last 2 lines) of ref and sub implementations
     REF_OUT=$("$REF_IMPL" $OPTIONS "$TESTCASE_DIR/$PROGRAM" $INPUT 2>&1 | tail -2)
-    SUB_OUT=$($TIMEOUT ./quandary $OPTIONS "$TESTCASE_DIR/$PROGRAM" $INPUT 2>&1 | tail -2)
+    SUB_OUT=$(quandary $OPTIONS "$TESTCASE_DIR/$PROGRAM" $INPUT 2>&1 | tail -2)
     # If the ref quandary process exited with a nonzero code, we only care about
     # the quandary process return value (the last line)
     if [[ $(echo "$REF_OUT" | tail -1) != "Quandary process returned 0" ]]; then
@@ -38,7 +40,7 @@ do_one_test() {
             echo 'Running reference interpreter again and showing output:'
             "$REF_IMPL" $OPTIONS "$TESTCASE_DIR/$PROGRAM" $INPUT
             echo 'Running submitted interpreter again and showing output:'
-            $TIMEOUT ./quandary $OPTIONS "$TESTCASE_DIR/$PROGRAM" $INPUT
+            quandary $OPTIONS "$TESTCASE_DIR/$PROGRAM" $INPUT
             exit
         fi
         SCORE=$((SCORE + POINTS))
@@ -55,6 +57,11 @@ do_one_test() {
     # Uncomment to debug ALL test cases:
     # echo REF_OUT is $REF_OUT
     # echo SUB_OUT is $SUB_OUT
+}
+
+quandary() {
+    $TIMEOUT java -cp "$CUP_DIR/java-cup-11b-runtime.jar:." -ss1g -ea interpreter.Interpreter $*
+    echo Quandary process returned $?
 }
 
 if [ "$#" -ne 4 ] && [ "$#" -ne 5 ]; then
@@ -117,15 +124,13 @@ gzip -cd "$SUBMISSION_TGZ" | tar xf - -C "$SUBMISSION_DIR"
 
 # Build the submitted project
 cd "$SUBMISSION_DIR"
-make clean
-make classes
-if [[ $? -ne 0 ]]; then
-    echo Couldn\'t run make.
-    exit 1
-fi
+(cd parser && $JFLEX_DIR/bin/jflex --nobak Scanner.jflex)
+(cd parser && java -jar $CUP_DIR/java-cup-11b.jar -interface -parser Parser Parser.cup)
+javac -cp $CUP_DIR/java-cup-11b.jar:. */*.java
 
 # Test each test case
 SCORE=0
+MAX_SCORE=0
 while IFS= read -r line; do
     #echo do_one_test $line
     do_one_test $line
