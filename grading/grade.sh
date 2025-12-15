@@ -36,11 +36,15 @@ do_one_test() {
     if [ "$REF_OUT" == "$SUB_OUT" ]; then
         echo PASSED
         if [ "$PROGRAM" == "isrefint.q" ]; then
+            set +e
             echo 'isrefint.q PASSED, which means something is wrong with how the grading script was run!'
+            echo '*******************************************************'
             echo 'Running reference interpreter again and showing output:'
             "$REF_IMPL" $OPTIONS "$TESTCASE_DIR/$PROGRAM" $INPUT
+            echo '*******************************************************'
             echo 'Running submitted interpreter again and showing output:'
             quandary $OPTIONS "$TESTCASE_DIR/$PROGRAM" $INPUT
+            echo '*******************************************************'
             exit
         fi
         SCORE=$((SCORE + POINTS))
@@ -50,13 +54,18 @@ do_one_test() {
         else
             echo FAILED
         fi
-        # Uncomment to debug FAILED test cases only:
-        # echo REF_OUT is $REF_OUT
-        # echo SUB_OUT is $SUB_OUT
+        if [[ "${VERBOSE:-0}" -eq 1 ]] && [[ "$PROGRAM" != "isrefint.q" ]]; then
+            set +e
+            echo '*******************************************************'
+            echo 'Reference interpreter output:'
+            "$REF_IMPL" $OPTIONS "$TESTCASE_DIR/$PROGRAM" $INPUT
+            echo '*******************************************************'
+            echo 'Submitted interpreter output:'
+            quandary $OPTIONS "$TESTCASE_DIR/$PROGRAM" $INPUT
+            echo '*******************************************************'
+            set -e
+        fi
     fi
-    # Uncomment to debug ALL test cases:
-    # echo REF_OUT is $REF_OUT
-    # echo SUB_OUT is $SUB_OUT
 }
 
 quandary() {
@@ -64,8 +73,13 @@ quandary() {
     echo Quandary process returned $?
 }
 
+if [ "$1" == '--verbose' ]; then
+    VERBOSE=1
+    shift
+fi
+
 if [ "$#" -ne 4 ] && [ "$#" -ne 5 ]; then
-    echo Usage: grade.sh SUBMISSION_TGZ REF_IMPL TESTCASES_FILE TESTCASE_DIR [TIMEOUT_IN_SECONDS]
+    echo Usage: grade.sh [--verbose] SUBMISSION_TGZ REF_IMPL TESTCASES_FILE TESTCASE_DIR [TIMEOUT_IN_SECONDS]
     exit
 fi
 
