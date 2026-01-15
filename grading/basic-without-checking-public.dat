@@ -1,74 +1,74 @@
- 0 isrefint.q 42 -heapsize 1638400
- 1 ssetRightandLeft.q      42 -heapsize 1638400
- 1 sfact.q                  6 -heapsize 1638400
- 1 sCheckParams.q           8 -heapsize 1638400
- 1 sGetMax.q               42 -heapsize 1638400
- 1 sFibSeries.q            15 -heapsize 1638400
- 1 sgetVal.q                7 -heapsize 1638400
- 1 sNatural.q              10 -heapsize 1638400
- 1 sReplace.q              55 -heapsize 1638400
- 1 sRevList.q               8 -heapsize 1638400
- 1 sSquareSeq.q            10 -heapsize 1638400
- 1 sminJumps.q              5 -heapsize 1638400
- 1 sSort.q                 42 -heapsize 1638400
- 1 sBinarySearch.q        666 -heapsize 1638400
- 1 sBinarySearch.q         27 -heapsize 1638400
- 1            calc2.q      10 -heapsize 1638400
- 1          primes2.q     200 -heapsize 1638400
- 1 simpleRandomList.q      88 -heapsize 1638400
- 1      simpleWhile.q     100 -heapsize 1638400
- 1             fact.q      15 -heapsize 1638400
- 1             flip.q      30 -heapsize 1638400
- 1             max3.q     200 -heapsize 1638400
- 1            third.q      20 -heapsize 1638400
- 1          append3.q      42 -heapsize 1638400
- 1           cycles.q      15 -heapsize 1638400
- 1         garbage2.q  200000 -heapsize 1638400
- 1      sideeffect3.q      10 -heapsize 1638400
- 1             nils.q      42 -heapsize 1638400
- 1         sortdet4.q      42 -heapsize 1638400
- 1         blah.q          15 -heapsize 1638400
- 1         calc.q          42 -heapsize 1638400
- 1    fibserial.q          10 -heapsize 1638400
- 1       primes.q          70 -heapsize 1638400
- 1      updates.q          42 -heapsize 1638400
- 1        blarg.q           5 -heapsize 1638400
- 1       simple.q           8 -heapsize 1638400
- 1         fact.q          12 -heapsize 1638400
- 1      primes2.q          50 -heapsize 1638400
- 1         flip.q          10 -heapsize 1638400
- 1       simple.q          18 -heapsize 1638400
- 1         fact.q          19 -heapsize 1638400
- 1      primes3.q         100 -heapsize 1638400
- 1          max.q          15 -heapsize 1638400
- 1       second.q          20 -heapsize 1638400
- 1       append.q          42 -heapsize 1638400
- 1 castingabout.q          20 -heapsize 1638400
- 1 castingabout.q         -20 -heapsize 1638400
- 1       casts2.q          20 -heapsize 1638400
- 1       cycles.q          20 -heapsize 1638400
- 1      depcast.q          20 -heapsize 1638400
- 1        fact2.q          20 -heapsize 1638400
- 1        flip2.q         200 -heapsize 1638400
- 1      garbage.q     1000000 -heapsize 1638400
- 1     garbage2.q     1000000 -heapsize 1638400
- 1    goodlists.q          40 -heapsize 1638400
- 1         heap.q           2 -heapsize 1638400
- 1     inputdep.q           1 -heapsize 1638400
- 1     inputdep.q           3 -heapsize 1638400
- 1       insert.q          42 -heapsize 1638400
- 1          max.q          10 -heapsize 1638400
- 1  mutablePara.q          42 -heapsize 1638400
- 1   randomList.q         100 -heapsize 1638400
- 1   sideeffect.q          42 -heapsize 1638400
- 1  sideeffect2.q          42 -heapsize 1638400
- 1      sortdet.q          42 -heapsize 1638400
- 1     sortdet2.q          42 -heapsize 1638400
- 1          sum.q          42 -heapsize 1638400
- 1     temproot.q         100 -heapsize 1638400
- 1    temproot2.q          10 -heapsize 1638400
- 1     twoCells.q     1000000 -heapsize 1638400
- 1     updates3.q          42 -heapsize 1638400
+0 isrefint.q 42 -heapsize 1638400
+1 ssetRightandLeft.q      42 -heapsize 1638400
+1 sfact.q                  6 -heapsize 1638400
+1 sCheckParams.q           8 -heapsize 1638400
+1 sGetMax.q               42 -heapsize 1638400
+1 sFibSeries.q            15 -heapsize 1638400
+1 sgetVal.q                7 -heapsize 1638400
+1 sNatural.q              10 -heapsize 1638400
+1 sReplace.q              55 -heapsize 1638400
+1 sRevList.q               8 -heapsize 1638400
+1 sSquareSeq.q            10 -heapsize 1638400
+1 sminJumps.q              5 -heapsize 1638400
+1 sSort.q                 42 -heapsize 1638400
+1 sBinarySearch.q        666 -heapsize 1638400
+1 sBinarySearch.q         27 -heapsize 1638400
+1            calc2.q      10 -heapsize 1638400
+1          primes2.q     200 -heapsize 1638400
+1 simpleRandomList.q      88 -heapsize 1638400
+1      simpleWhile.q     100 -heapsize 1638400
+1             fact.q      15 -heapsize 1638400
+1             flip.q      30 -heapsize 1638400
+1             max3.q     200 -heapsize 1638400
+1            third.q      20 -heapsize 1638400
+1          append3.q      42 -heapsize 1638400
+1           cycles.q      15 -heapsize 1638400
+1         garbage2.q  200000 -heapsize 1638400
+1      sideeffect3.q      10 -heapsize 1638400
+1             nils.q      42 -heapsize 1638400
+1         sortdet4.q      42 -heapsize 1638400
+1         blah.q          15 -heapsize 1638400
+1         calc.q          42 -heapsize 1638400
+1    fibserial.q          10 -heapsize 1638400
+1       primes.q          70 -heapsize 1638400
+1      updates.q          42 -heapsize 1638400
+1        blarg.q           5 -heapsize 1638400
+1       simple.q           8 -heapsize 1638400
+1         fact.q          12 -heapsize 1638400
+1      primes2.q          50 -heapsize 1638400
+1         flip.q          10 -heapsize 1638400
+1       simple.q          18 -heapsize 1638400
+1         fact.q          19 -heapsize 1638400
+1      primes3.q         100 -heapsize 1638400
+1          max.q          15 -heapsize 1638400
+1       second.q          20 -heapsize 1638400
+1       append.q          42 -heapsize 1638400
+1 castingabout.q          20 -heapsize 1638400
+1 castingabout.q         -20 -heapsize 1638400
+1       casts2.q          20 -heapsize 1638400
+1       cycles.q          20 -heapsize 1638400
+1      depcast.q          20 -heapsize 1638400
+1        fact2.q          20 -heapsize 1638400
+1        flip2.q         200 -heapsize 1638400
+1      garbage.q     1000000 -heapsize 1638400
+1     garbage2.q     1000000 -heapsize 1638400
+1    goodlists.q          40 -heapsize 1638400
+1         heap.q           2 -heapsize 1638400
+1     inputdep.q           1 -heapsize 1638400
+1     inputdep.q           3 -heapsize 1638400
+1       insert.q          42 -heapsize 1638400
+1          max.q          10 -heapsize 1638400
+1  mutablePara.q          42 -heapsize 1638400
+1   randomList.q         100 -heapsize 1638400
+1   sideeffect.q          42 -heapsize 1638400
+1  sideeffect2.q          42 -heapsize 1638400
+1      sortdet.q          42 -heapsize 1638400
+1     sortdet2.q          42 -heapsize 1638400
+1          sum.q          42 -heapsize 1638400
+1     temproot.q         100 -heapsize 1638400
+1    temproot2.q          10 -heapsize 1638400
+1     twoCells.q     1000000 -heapsize 1638400
+1     updates3.q          42 -heapsize 1638400
 1 sNewmanConwaySequence.q 16 -heapsize 1638400
 1 updates5.q 8 -heapsize 1638400
 1 sideeffect3.q 15 -heapsize 1638400
@@ -182,21 +182,41 @@
 1 islist.q                42 -heapsize 1638400
 1 nth.q                   25 -heapsize 1638400
 1 tree.q                   9 -heapsize 1638400
- 1 simpleref.q   2024 -heapsize 1638400
- 1 sNatural.q      20 -heapsize 1638400
- 1 sReplace.q      99 -heapsize 1638400
- 1 sSquareSeq.q    20 -heapsize 1638400
- 1 sBinarySearch.q 32 -heapsize 1638400
- 1 calc3.q         40 -heapsize 1638400
- 1 impsum.q       100 -heapsize 1638400
- 1 third2.q        42 -heapsize 1638400
- 1 cycles.q       150 -heapsize 1638400
- 1 primes3.q      200 -heapsize 1638400
- 1 serialqsort3.q 100 -heapsize 1638400
- 1 insert2.q       25 -heapsize 1638400
- 1 casts2b.q       60 -heapsize 1638400
- 1 fibs.q          25 -heapsize 1638400
- 1 nth.q           22 -heapsize 1638400
- 1 tree.q           8 -heapsize 1638400
- 1 append5.q       42 -heapsize 1638400
+1 simpleref.q   2024 -heapsize 1638400
+1 sNatural.q      20 -heapsize 1638400
+1 sReplace.q      99 -heapsize 1638400
+1 sSquareSeq.q    20 -heapsize 1638400
+1 sBinarySearch.q 32 -heapsize 1638400
+1 calc3.q         40 -heapsize 1638400
+1 impsum.q       100 -heapsize 1638400
+1 third2.q        42 -heapsize 1638400
+1 cycles.q       150 -heapsize 1638400
+1 primes3.q      200 -heapsize 1638400
+1 serialqsort3.q 100 -heapsize 1638400
+1 insert2.q       25 -heapsize 1638400
+1 casts2b.q       60 -heapsize 1638400
+1 fibs.q          25 -heapsize 1638400
+1 nth.q           22 -heapsize 1638400
+1 tree.q           8 -heapsize 1638400
+1 append5.q       42 -heapsize 1638400
+1 islist2.q           42 -heapsize 1638400
+1 calc3.q             60 -heapsize 1638400
+1 max3.q              75 -heapsize 1638400
+1 nth.q               28 -heapsize 1638400
+1 replace.q           35 -heapsize 1638400
+1 primes7.q          300 -heapsize 1638400
+1 sgetVal2.q           5 -heapsize 1638400
+1 sideeffect3.q      300 -heapsize 1638400
+1 simpledot.q         20 -heapsize 1638400
+1 simplenil2.q        42 -heapsize 1638400
+1 simpleref.q       2025 -heapsize 1638400
+1 simpleWhile.q       85 -heapsize 1638400
+1 fiblist.q           50 -heapsize 1638400
+1 sortdet5.q          42 -heapsize 1638400
+1 sRevList2.q         80 -heapsize 1638400
+1 stuff.q             50 -heapsize 1638400
+1 third.q             15 -heapsize 1638400
+1 tree.q              10 -heapsize 1638400
+1 twoCells.q      100000 -heapsize 1638400
+1 updates5.q          12 -heapsize 1638400
 0 isrefint.q          42 -heapsize 1638400

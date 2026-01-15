@@ -201,4 +201,25 @@
 1 Harlogical2.q 55
 1 Harlogical3.q 533
 1 swoc-calc-with-arg-i64.q 1011
+1 verysimple.q 42
+1 simplecond.q 42
+1 simplecond2.q 42
+1 returnreturn.q 42
+1 simplevars.q 100
+1 isPrime.q 333
+1 lg3.q 35
+1 notyet2.q 100
+1 nestedIf.q 30
+1 swoc-calc-with-arg-i64.q 2
+1 Hardeeplynested.q 15
+1 earlyreturn.q -1
+1 sCond2.q 70
+1 square.q 350
+1 sBasicNested.q -4
+1 ident3.q 100
+1 precedence4.q 100
+1 swoc-var.q 14
+1 lg4.q 50
+1 twowhys.q -1
+1 compound3.q 50
 0 isrefint.q 42 # should fail
