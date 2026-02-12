@@ -3,4 +3,3 @@ int main(int arg) {
     Ref output = (2 . nil);
     return genericEquals(reverse(input), output);
 }
-
