@@ -1,0 +1,27 @@
+0 isrefint.q 42         # should fail
+2 sosimple.q 42
+2 reallysimple.q 42
+2 sBasicCond.q 42
+2 simplevars.q 80
+2 logicCond.q -80
+2 cj-scope-1.q 1
+2 isPrime.q 17
+2 simplecond2.q 42
+2 cj-control-flow.q 20
+2 simplecond.q 42
+2 compound2.q 5
+2 cond2.q 54
+2 isPrime.q 30
+2 ident.q 1
+2 cj-control-flow.q 15
+2 cond7.q -10
+2 morevars2.q 20
+2 simpleif2.q 42
+2 ifelse4.q 2
+2 lg4.q 203
+2 swoc-nesting2.q 4
+2 nabs.q -3341
+2 precedence3.q 42
+2 square.q 25
+2 Harmultiscoped.q 5
+0 isrefint.q 42         # should fail
