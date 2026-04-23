@@ -73,7 +73,7 @@ quandary() {
     echo Quandary process returned $?
 }
 
-if [ "$1" == '--verbose' ]; then
+if [ "$#" -ne 0 ] && [ "$1" == '--verbose' ]; then
     VERBOSE=1
     shift
 fi
