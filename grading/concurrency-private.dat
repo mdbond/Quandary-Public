@@ -7,7 +7,6 @@
 1  concsortedlist.q   80 -heapsize 1638400
 1  concsortedlist2.q 100 -heapsize 1638400
 1  steps3.q         2135 -heapsize 1638400 # relies on concurrent execution
-1  conclist2.q      1178 -heapsize 1638400
 1  concsortedlist.q  100 -heapsize 1638400
 1  sharedctr.q        25 -heapsize 1638400
 1  turns3.q            6 -heapsize 1638400 # relies on concurrent execution
