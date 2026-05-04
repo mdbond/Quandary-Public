@@ -1,26 +1,26 @@
-0 isrefint.q       42 -heapsize 1638400
-1 third.q          25 -heapsize 1638400
-1 casts2.q         10 -heapsize 1638400
-1 sFibSeries.q     24 -heapsize 1638400
-1 calc2.q          56 -heapsize 1638400
-1 sReplace.q       32 -heapsize 1638400
-1 primes7.q       250 -heapsize 1638400
-1 serialbubblish.q 42 -heapsize 1638400
-1 simpleisnil2.q   42 -heapsize 1638400
-1 serialqsort4.q   33 -heapsize 1638400
-1 inputdep.q        1 -heapsize 1638400
-1 sBinarySearch.q  15 -heapsize 1638400
-1 rests.q          38 -heapsize 1638400
-1 mutation3.q      10 -heapsize 1638400
-1 facti.q          -7 -heapsize 1638400
-1 fact.q           17 -heapsize 1638400
-1 cycles.q       1500 -heapsize 1638400
-1 simpleisatom.q   42 -heapsize 1638400
-1 tree.q            9 -heapsize 1638400
-1 sCheckParams.q   12 -heapsize 1638400
-1 simpleleft2.q   420 -heapsize 1638400
-1 sideeffect3.q   234 -heapsize 1638400
-1 garbage2.q    20000 -heapsize 1638400
-1 fibserial.q      12 -heapsize 1638400
-1 nth.q            25 -heapsize 1638400
-0 isrefint.q       42 -heapsize 1638400
+0 isrefint.q       42
+1 third.q          25
+1 casts2.q         10
+1 sFibSeries.q     24
+1 calc2.q          56
+1 sReplace.q       32
+1 primes7.q       250
+1 serialbubblish.q 42
+1 simpleisnil2.q   42
+1 serialqsort4.q   33
+1 inputdep.q        1
+1 sBinarySearch.q  15
+1 rests.q          38
+1 mutation3.q      10
+1 facti.q          -7
+1 fact.q           17
+1 cycles.q       1500
+1 simpleisatom.q   42
+1 tree.q            9
+1 sCheckParams.q   12
+1 simpleleft2.q   420
+1 sideeffect3.q   234
+1 garbage2.q    20000
+1 fibserial.q      12
+1 nth.q            25
+0 isrefint.q       42

@@ -1,4 +1,4 @@
-0 isrefint.q   42    -gc MarkSweep -heapsize 1638400
+0 isrefint.q   42    -gc MarkSweep
 1 fibserial.q  20    -gc MarkSweep -heapsize 16384
 1 fibfree.q    20    -gc Explicit  -heapsize 16384
 1 primes.q    100    -gc MarkSweep -heapsize   800

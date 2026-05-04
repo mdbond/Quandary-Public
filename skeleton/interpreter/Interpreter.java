@@ -26,7 +26,7 @@ public class Interpreter {
 
     public static void main(String[] args) {
         String gcType = "NoGC"; // default for skeleton, which only supports NoGC
-        long heapBytes = 1 << 14;
+        long heapBytes = 0x190000; // 1638400 bytes
         int i = 0;
         String filename;
         long quandaryArg;
