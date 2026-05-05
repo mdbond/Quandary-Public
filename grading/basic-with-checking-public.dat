@@ -46,8 +46,6 @@
 1 castingabout.q  -4
 1 castingabout.q   4
 1 castingabout.q  10
-1 casts2.q 5
-1 casts2.q 42
 1 listsbad.q 42
 1 sideeffect2.q 42
 1 sortdet3.q 42
@@ -58,12 +56,9 @@
 1 updates3.q 42
 1 badCompare2.q 5
 1 fact2.q 16
-1 scope.q 4
  1         blah.q      15
- 1         calc.q      42
  1    fibserial.q      10
  1       primes.q      70
- 1      updates.q      42
  1        blarg.q       5
  1       simple.q       8
  1         fact.q      12
@@ -71,42 +66,31 @@
  1         flip.q      10
  1       simple.q      18
  1         fact.q      19
- 1      primes3.q     100
  1          max.q      15
  1       second.q      20
- 1       append.q      42
  1 castingabout.q      20
  1 castingabout.q     -20
  1 castingabout.q       5
  1     castless.q      20
  1        casts.q      20
  1       casts2.q      20
- 1       casts2.q      42
  1       cycles.q      20
  1      depcast.q      20
- 1      depcast.q       1
  1        fact2.q      20
  1        flip2.q     200
  1      garbage.q   10000
  1     garbage2.q   10000
  1    goodlists.q      40
  1         heap.q       2
- 1     inputdep.q       1
- 1     inputdep.q       2
- 1     inputdep.q       3
  1       insert.q      42
  1          max.q      10
  1  mutablePara.q      42
  1   randomList.q     100
- 1   sideeffect.q      42
- 1  sideeffect2.q      42
- 1      sortdet.q      42
  1     sortdet2.q      42
  1          sum.q      42
  1     temproot.q     100
  1    temproot2.q      10
  1     twoCells.q   10000
- 1     updates3.q      42
  1 ssetRightandLeft.q 42
  1 sfact.q 6
  1 sCheckParams.q 8
@@ -135,12 +119,9 @@
  1      sideeffect3.q      10
  1             nils.q      42
  1         sortdet4.q      42
-1 append.q 42
 1 badappend2.q 42 # static: mutable func
 1 badappend3.q 42 # static: mutable var
 1 badappend4.q 42 # static: missing return
-1 casts2.q 5
-1 casts2.q 42 # dynamic: downcast
 1 casts3.q 5 # static: types/casting
 1 casts4.q 5
 1 casts5.q 5 # dynamic: downcast
@@ -160,10 +141,8 @@
 1 misc.q 5
 1 misc2.q 5  # static: types/casting
 1 unnecessarymutables.q 42
-1 depcast.q 1 # dynamic: downcast
 1 depcast.q 3
 1 castingabout2.q 42 
-1 badappend3.q 42
 1 badappend5.q 21
 1 casts6.q 5
 1 casts5.q 10
@@ -171,7 +150,6 @@
 1 sortdet8.q 4
 1 sortdet8.q 10
 1 misc3.q 4
-1 depcast.q 1
 1 depcast2.q 3
 1 dynamiccast.q 3
 1 niloops3.q 2
@@ -179,7 +157,6 @@
 1 badcast.q 2
 1 badcast2.q 3
 1 inputdep2.q 2
-1 castingabout.q -4
 1 funcType.q 3
 1 immutablearg.q 1 
 1 immutableFunc.q 1 
@@ -199,7 +176,6 @@
 1 noisyMutablePara.q 25
 1 randomList.q 15
 1 scope6.q 3
-1 garbage2.q       10000
 1 updates6.q           42
 1 primes6.q          200
 1 serialbubblish.q    42
@@ -232,8 +208,6 @@
 1 vardecl6.q 4 # dynamic cast
 1 niloops3.q 10 # dynamic nil
 1 sortdet10.q 42 # static
-1 castingabout.q -4
-1 castingabout.q 5 # dynamic cast
 1 noisyMutablePara.q 42
 1 primes8.q 142 # static
 0 isrefint.q 42

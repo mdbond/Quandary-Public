@@ -240,4 +240,5 @@
 1  steps5.q          520  # relies on concurrent execution
 1  steps6.q           55  # relies on concurrent execution
 1  steps3.q          140  # relies on concurrent execution
+1  turns3.q            6 # relies on concurrent execution
 0  isrefint.q      42
